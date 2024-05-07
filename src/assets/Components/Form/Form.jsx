@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "./Form.module.scss"
+import styles from "./Form.module.scss";
 
 const Form = ({ onAddTask }) => {
   const [taskInput, setTaskInput] = useState('');
@@ -23,11 +23,11 @@ const Form = ({ onAddTask }) => {
   };
 
   return (
-    <div className="style.container">
+    <div className={styles.container}>
 
   
     <form onSubmit={handleSubmit}>
-      <div className="task">
+      <div className={styles.task}>
         <textarea
           type="text"
           placeholder="Enter Your Task"
@@ -35,14 +35,14 @@ const Form = ({ onAddTask }) => {
           onChange={handleTaskInputChange}
         />
       </div>
-      <div className="importance">
+      <div className={styles.importance}>
         <select name="importance" value={importance} onChange={handleImportanceChange}>
           <option value="low">Low</option>
           <option value="medium">Medium</option>
           <option value="high">High</option>
         </select>
       </div>
-      <div className="wr_btn">
+      <div className={styles.wr_btn}>
         <input type="submit" value="Add Task" />
       </div>
     </form>
